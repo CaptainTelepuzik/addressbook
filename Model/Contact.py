@@ -9,7 +9,7 @@ class Contact(BaseModel):
     user_id = Column(Integer, ForeignKey('users.id'))
     contact_name = Column(Text, nullable=False)
     contact_surname = Column(Text)
-    telephone = Column(Integer, nullable=False)
+    telephone = Column(Text, nullable=False)
     email = Column(Text, nullable=False)
 
     user = relationship('User', foreign_keys=[user_id])
